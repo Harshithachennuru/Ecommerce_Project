@@ -5,6 +5,7 @@ import CategoryCard from '../../Components/CategoryCard';
 import axios from 'axios';
 import { useEffect,useState} from 'react';
 import ProductCard from '../../Components/ProductCard';
+import EcommerceNavbar from '../../Components/Navbar/Navbar'
 function Home(){
     const[storeProducts,setStoreProducts] = useState([]);
     useEffect(()=>{
@@ -17,6 +18,7 @@ function Home(){
     },[])
     return(
         <>
+            <EcommerceNavbar />
             <Carousel />
             <div>
                 <h1>Categories</h1>

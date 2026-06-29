@@ -1,0 +1,154 @@
+.full{
+    display:flex;
+    height:100vh;
+    width:100vw;
+}
+
+.lefthalf{
+    width:280px;
+    min-height: 100vh;
+    background-color: rgb(53, 49, 49);
+    color:white;
+    padding:20px;
+}
+.righthalf{
+    width:100vw;
+    background-color: rgb(207, 221, 231);
+}
+
+*{
+    font-family: Arial, sans-serif;
+}
+
+.navbar{
+    width: 100%;
+    background-color:white;
+   
+}
+.navbar h3{
+    margin-left:20px;
+}
+
+.Add_Product{
+    width:1230px;
+    background:white;
+    padding:20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height:500px;
+    margin-top:0;
+    border-radius: 5px;
+}
+
+.Product{
+    display:flex;
+    gap:30px;
+    width:100%;
+}
+
+.Add_Product_Left{
+    width:50%;
+    padding:20px;
+}
+
+.Add_Product_Right{
+    width:50%;
+    padding:20px;
+}
+
+.Heading{
+    background-color: white;
+    margin:20px;
+    padding:10px;
+    margin-bottom:2px;
+    border-radius: 5px;
+    width:1230px;
+}
+
+.product-form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    width:100%;
+}
+
+.product-form label{
+    font-size:15px;
+    font-weight:600;
+    color:#333;
+    margin-top:10px;
+}
+
+input, select{
+    width:100%;
+    height:45px;
+    padding:0 12px;
+    border:1px solid #d0d0d0;
+    border-radius:8px;
+    font-size:15px;
+    outline:none;
+    background:white;
+}
+
+
+.product-form input:focus,
+.product-form select:focus{
+    border-color:#3498db;
+}
+
+
+.product-form input::placeholder{
+    color:#aaa;
+}
+
+.product-right-form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+
+.product-right-form label{
+    font-size:15px;
+    font-weight:600;
+    color:#333;
+    margin-top:10px;
+}
+
+.product-right-form textarea{
+    width:600px;
+    height:150px;
+    padding:12px;
+    border:1px solid #d0d0d0;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+}
+
+
+.product-right-form textarea:focus{
+    border-color:#3498db;
+}
+
+.product-right-form input[type="file"]{
+    width:100%;
+    padding:35px 15px;
+    border:2px dashed #aaa;
+    border-radius:12px;
+    background:#fafafa;
+    cursor:pointer;
+}
+
+
+.product-right-form input[type="file"]:hover{
+    border-color:#3498db;
+}
+
+.footer{
+    background-color: white;
+    padding:15px;
+    margin:20px;
+    margin-top:2px;
+    border-radius: 5px;
+    width:1230px;
+}

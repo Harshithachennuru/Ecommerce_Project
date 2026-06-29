@@ -16,3 +16,15 @@
     width:500px;
     border-radius: 10px;
 }
+
+
+.Login{
+    color: #0d6efd;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.Login:hover{
+    text-decoration: underline;
+}

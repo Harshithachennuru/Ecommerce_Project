@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
           
 function CategoryCard({filename, categoryName}) {
-  console.log(filename, categoryName);
+  
   return (
     <Card className=" text-white" style={{width:'300px',height:'300px',margin:'20px'}}>
       <Card.Img src={filename} alt="Card image" />
