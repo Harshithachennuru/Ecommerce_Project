@@ -63,25 +63,38 @@ app.post('/login',(req,res)=>{
     db.query(
         `select * from users where email = ?`,[email],(err,result)=>{
             if(err){
-                console.log("error querying the database");
-                return res.send("error querying database");
+                return res.json({message:"error querying the database"});
             }
             if(result.length === 0){
-                return res.send("invalid credentials");
+                return res.json({message:"invalid credentials"});
             }
             const user = result[0];
-            console.log(user.userRole)
-            console.log(userRole)
             if(password === user.password && userRole === user.userRole){
                 if(user.userRole ==="Admin"){
-                    res.send("Admin logged in successfully")
+                    return res.json({
+                        message:"Admin logged in successfully",
+                        user:{
+                            id:user.id,
+                            email:user.email,
+                            role:user.userRole
+                        }
+                    })
                 }
                 else{
-                    res.send("User logged in successfully")
+                    return res.json({
+                        message:"User logged in successfully",
+                        user:{
+                            id:user.id,
+                            email:user.email,
+                            role:user.userRole
+                        }
+                    })
                 }
             }
             else{
-                return res.send("invalid credentials");
+                return res.json({
+                    message:"invalid credentials"
+                })
             }
         }
     )

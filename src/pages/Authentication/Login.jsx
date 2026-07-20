@@ -20,17 +20,17 @@ function Login() {
                 userRole:userRole
             })
         })
-        .then((res)=>res.text())
+        .then((res)=>res.json())
         .then((data)=>{
-            alert(data);
-            if(data ==="Admin logged in successfully"){
+            alert(data.message);
+            if(data.message ==="Admin logged in successfully"){
                 navigate("/admindashboard",{
-                    state:{email:email}
+                    state:{user:data.user}
                 })
             }
-            if(data ==="User logged in successfully"){
+            if(data.message ==="User logged in successfully"){
                 navigate("/",{
-                    state:{email:email}
+                    state:{user:user.data}
                 })
             }
         })
